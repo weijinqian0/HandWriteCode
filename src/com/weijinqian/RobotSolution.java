@@ -20,7 +20,9 @@ public class RobotSolution {
         boolean[][] states = new boolean[mRows * mCols][mRows * mCols];
         int curRow = 0;
         int curCol = 0;
-        states[0][0] = true;
+        if (mThreshold >= 0) {
+            states[0][0] = true;
+        }
         for (int i = 1; i < mCols * mRows; i++) {
             for (int k = 0; k < mRows * mCols; k++) {
                 curRow = k / mCols;
@@ -66,7 +68,9 @@ public class RobotSolution {
         boolean[] states = new boolean[mRows * mCols];
         int curRow = 0;
         int curCol = 0;
-        states[0] = true;
+        if (mThreshold >= 0) {
+            states[0] = true;
+        }
         for (int i = 1; i < mCols * mRows; i++) {
             for (int k = 0; k < mRows * mCols; k++) {
                 curRow = k / mCols;
