@@ -17,7 +17,8 @@ public class CutRopeSolution {
      * f(0,8)
      * /    |     |       |       |       |       |
      * f(1,7) f(2,6) f(3,5)  f(4,4)  f(5,3) f(6,2)  f(7,1)
-     * f(1,1,6) f(1,2,5) f(1,3,4)
+     * f(1,6) f(2,5) f(3,4)
+     * 所以重复子结构其实是f(1) f(2)等类似特征
      * <p>
      * 可见 这里有大量的子问题  如果能将子问题的答案保存好，就可以降低很多的不必要的计算
      *
@@ -42,35 +43,48 @@ public class CutRopeSolution {
     }
 
     /**
-     * 这种题目很难使用状态矩阵来做  因为每次选择可以重复，导致无法处理，所以这里选择公式的推导算法
-     * <p>
-     * <p>
-     * 使用DP算法
+     * 使用DP状态表的方式做算法
      * 1. 使用标志当前是否选择切分的方式
      * 定义一个二维矩阵 state[target][target]
-     * 行代表当前的长度，列表示当前剩余长度，元素表示当前的乘积
+     * 行代表当前的长度，列表示当前长度，元素表示当前的乘积
      * <p>
      * 2. 每次遍历 需要根据上一行的值，填满相关位置
      *
+     * 状态表相当于对DP做选择上的迭代（BFS）
+     * 状态方程是对DP做目标上的迭代（DFS）
+     *
      * @param target
      */
-    public void DP(int target) {
-        int[][] state = new int[target][target + 1];
+    public int DP(int target) {
+        if (target <= 3) {
+            return target - 1;
+        }
+        // 0表示选择切分为1，只能切分
+        int[][] state = new int[target][target];
 
-        // 选择和没选择 当前的乘积都是1
-        state[0][0] = 1;
-        state[0][target] = 1;
-        for (int i = 1; i <= target; i++) {
-            for (int j = 0; j <= target; j++) {
-                if (state[i - 1][j] != 0) {
-                    // 选择
-                    state[i][j - i] = state[i - 1][j] * i;
-                    // 不选择
+        // 这里变成了1-target种选择了
+        for (int i = 0; i < target; i++) {
+            state[0][i] = i + 1;
+        }
+
+        for (int i = 1; i < target; i++) {
+            for (int j = 0; j < target; j++) {
+                if ((state[i - 1][j] + (j + 1)) <= target) {
+                    state[i][j] = state[i - 1][j] * (j + 1);
+                } else {
                     state[i][j] = state[i - 1][j];
                 }
             }
 
         }
+
+        int max = 0;
+        for (int i = 0; i < target; i++) {
+            if (state[target - 1][i] > max) {
+                max = state[target - 1][i];
+            }
+        }
+        return max;
     }
 
     /**
