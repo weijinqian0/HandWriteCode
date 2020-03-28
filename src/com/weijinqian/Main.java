@@ -11,7 +11,14 @@ public class Main {
 //        char[] str = new char[]{'a', 'b', 'c', 'b'};
 //        printBoolean(new HasPathSolution().hasPath(matrix, 3, 4, str));
 
-        print(new PowerSolution().Power(3, -5));
+//        print(new PowerSolution().Power(3, -5));
+//        ListNode head = new ListNode(1);
+//        head.next = new ListNode(2);
+//        head.next.next = new ListNode(3);
+//        head.next.next.next = new ListNode(4);
+//        head.next.next.next.next = new ListNode(5);
+//        new FindKthNodeSolution().FindKthToTail(head, 5);
+
     }
 
     private static void print(int value) {
