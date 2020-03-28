@@ -19,6 +19,19 @@ public class Main {
 //        head.next.next.next.next = new ListNode(5);
 //        new FindKthNodeSolution().FindKthToTail(head, 5);
 
+        ListNode head = new ListNode(1);
+        head.next = new ListNode(3);
+        head.next.next = new ListNode(5);
+        head.next.next.next = new ListNode(7);
+        head.next.next.next.next = new ListNode(9);
+
+        ListNode head1 = new ListNode(2);
+        head1.next = new ListNode(4);
+        head1.next.next = new ListNode(6);
+        head1.next.next.next = new ListNode(8);
+
+        new MergeSortSolution().Merge(head, head1);
+
     }
 
     private static void print(int value) {
