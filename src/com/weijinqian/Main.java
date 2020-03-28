@@ -11,6 +11,7 @@ public class Main {
 //        char[] str = new char[]{'a', 'b', 'c', 'b'};
 //        printBoolean(new HasPathSolution().hasPath(matrix, 3, 4, str));
 
+        print(new PowerSolution().Power(3, -5));
     }
 
     private static void print(int value) {
@@ -18,6 +19,10 @@ public class Main {
     }
 
     private static void printBoolean(boolean value) {
+        System.out.println(value);
+    }
+
+    private static void print(double value) {
         System.out.println(value);
     }
 }
