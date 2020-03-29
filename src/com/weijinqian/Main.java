@@ -1,5 +1,7 @@
 package com.weijinqian;
 
+import java.util.List;
+
 public class Main {
 
     public static void main(String[] args) {
@@ -19,18 +21,26 @@ public class Main {
 //        head.next.next.next.next = new ListNode(5);
 //        new FindKthNodeSolution().FindKthToTail(head, 5);
 
-        ListNode head = new ListNode(1);
-        head.next = new ListNode(3);
-        head.next.next = new ListNode(5);
-        head.next.next.next = new ListNode(7);
-        head.next.next.next.next = new ListNode(9);
+//        ListNode head = new ListNode(1);
+//        head.next = new ListNode(3);
+//        head.next.next = new ListNode(5);
+//        head.next.next.next = new ListNode(7);
+//        head.next.next.next.next = new ListNode(9);
+//
+//        ListNode head1 = new ListNode(2);
+//        head1.next = new ListNode(4);
+//        head1.next.next = new ListNode(6);
+//        head1.next.next.next = new ListNode(8);
+//
+//        new MergeSortSolution().Merge(head, head1);
 
-        ListNode head1 = new ListNode(2);
-        head1.next = new ListNode(4);
-        head1.next.next = new ListNode(6);
-        head1.next.next.next = new ListNode(8);
-
-        new MergeSortSolution().Merge(head, head1);
+        int[][] matrix = new int[5][2];
+        for (int i = 0; i < 5; i++) {
+            for (int j = 0; j < 2; j++) {
+                matrix[i][j] = i * 2 + j + 1;
+            }
+        }
+        print(new PrintMatrixSolution().printMatrix(matrix));
 
     }
 
@@ -44,5 +54,11 @@ public class Main {
 
     private static void print(double value) {
         System.out.println(value);
+    }
+
+    private static void print(List list) {
+        for (int i = 0; i < list.size(); i++) {
+            System.out.print(list.get(i) + " ");
+        }
     }
 }
