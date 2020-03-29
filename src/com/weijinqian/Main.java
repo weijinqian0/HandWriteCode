@@ -34,13 +34,15 @@ public class Main {
 //
 //        new MergeSortSolution().Merge(head, head1);
 
-        int[][] matrix = new int[5][2];
-        for (int i = 0; i < 5; i++) {
-            for (int j = 0; j < 2; j++) {
-                matrix[i][j] = i * 2 + j + 1;
-            }
-        }
-        print(new PrintMatrixSolution().printMatrix(matrix));
+//        int[][] matrix = new int[5][2];
+//        for (int i = 0; i < 5; i++) {
+//            for (int j = 0; j < 2; j++) {
+//                matrix[i][j] = i * 2 + j + 1;
+//            }
+//        }
+//        print(new PrintMatrixSolution().printMatrix(matrix));
+
+        print(new FirstNotRepeatingCharSolution().FirstNotRepeatingChar("google"));
 
     }
 
