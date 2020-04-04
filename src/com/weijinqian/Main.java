@@ -42,7 +42,11 @@ public class Main {
 //        }
 //        print(new PrintMatrixSolution().printMatrix(matrix));
 
-        print(new FirstNotRepeatingCharSolution().FirstNotRepeatingChar("google"));
+//        print(new FirstNotRepeatingCharSolution().FirstNotRepeatingChar("google"));
+
+        int[] pushA = new int[]{1, 2, 3, 4, 5};
+        int[] popA = new int[]{4,5,3,2,1};
+        printBoolean(new IsPopOrderSolution().IsPopOrder(pushA, popA));
 
     }
 
