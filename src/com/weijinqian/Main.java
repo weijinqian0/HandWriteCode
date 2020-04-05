@@ -56,7 +56,7 @@ public class Main {
 //        int[] sequence = new int[]{4, 6, 12, 8, 16, 14, 10};
 //        printBoolean(new VerifySquenceOfBSTSolution().VerifySquenceOfBST(sequence));
 
-
+        print(new PermutationSolution().Permutation("abbc"));
 
     }
 
