@@ -47,10 +47,14 @@ public class Main {
 //        int[] pushA = new int[]{1, 2, 3, 4, 5};
 //        int[] popA = new int[]{4,5,3,2,1};
 //        printBoolean(new IsPopOrderSolution().IsPopOrder(pushA, popA));
-        TreeNode root = new TreeNode(1);
-        root.left = new TreeNode(2);
-        root.right = new TreeNode(4);
-        print(new PrintFromTopToBottomSolution().PrintFromTopToBottom(root));
+
+//        TreeNode root = new TreeNode(1);
+//        root.left = new TreeNode(2);
+//        root.right = new TreeNode(4);
+//        print(new PrintFromTopToBottomSolution().PrintFromTopToBottom(root));
+
+        int[] sequence = new int[]{4, 6, 12, 8, 16, 14, 10};
+        printBoolean(new VerifySquenceOfBSTSolution().VerifySquenceOfBST(sequence));
 
     }
 
