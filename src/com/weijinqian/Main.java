@@ -53,8 +53,10 @@ public class Main {
 //        root.right = new TreeNode(4);
 //        print(new PrintFromTopToBottomSolution().PrintFromTopToBottom(root));
 
-        int[] sequence = new int[]{4, 6, 12, 8, 16, 14, 10};
-        printBoolean(new VerifySquenceOfBSTSolution().VerifySquenceOfBST(sequence));
+//        int[] sequence = new int[]{4, 6, 12, 8, 16, 14, 10};
+//        printBoolean(new VerifySquenceOfBSTSolution().VerifySquenceOfBST(sequence));
+
+
 
     }
 
