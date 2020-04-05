@@ -60,8 +60,11 @@ public class Main {
 
 //        print(new PermutationSolution().Permutation("abbc"));
 
-        int[] sequence = new int[]{1,2,3,2,4,2,5,2,3};
-        print(new MoreThanHalfNumSolution().MoreThanHalfNum_Solution(sequence));
+//        int[] sequence = new int[]{1,2,3,2,4,2,5,2,3};
+//        print(new MoreThanHalfNumSolution().MoreThanHalfNum_Solution(sequence));
+
+        int[] array = new int[]{1,-2,3,10,-4,7,2,-5};
+        print(new FindGreatestSumOfSubArraySolution().FindGreatestSumOfSubArray(array));
 
     }
 
