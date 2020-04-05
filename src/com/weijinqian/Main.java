@@ -1,5 +1,7 @@
 package com.weijinqian;
 
+import java.util.Arrays;
+import java.util.Collections;
 import java.util.List;
 
 public class Main {
@@ -56,7 +58,10 @@ public class Main {
 //        int[] sequence = new int[]{4, 6, 12, 8, 16, 14, 10};
 //        printBoolean(new VerifySquenceOfBSTSolution().VerifySquenceOfBST(sequence));
 
-        print(new PermutationSolution().Permutation("abbc"));
+//        print(new PermutationSolution().Permutation("abbc"));
+
+        int[] sequence = new int[]{1,2,3,2,4,2,5,2,3};
+        print(new MoreThanHalfNumSolution().MoreThanHalfNum_Solution(sequence));
 
     }
 
