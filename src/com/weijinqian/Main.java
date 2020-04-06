@@ -66,8 +66,11 @@ public class Main {
 //        int[] array = new int[]{1,-2,3,10,-4,7,2,-5};
 //        print(new FindGreatestSumOfSubArraySolution().FindGreatestSumOfSubArray(array));
 
-        int[] array = new int[]{3, 32, 321};
-        print(new PrintMinNumberSolution().PrintMinNumber(array));
+//        int[] array = new int[]{3, 32, 321};
+//        print(new PrintMinNumberSolution().PrintMinNumber(array));
+
+        int[] array=new int[]{0,1,1,1,1,2,2,2,2,2,4,5,6,7};
+        print(new GetNumberOfKSolution().GetNumberOfK(array,3));
 
     }
 
