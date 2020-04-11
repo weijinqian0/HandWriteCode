@@ -72,8 +72,10 @@ public class Main {
 //        int[] array=new int[]{0,1,1,1,1,2,2,2,2,2,4,5,6,7};
 //        print(new GetNumberOfKSolution().GetNumberOfK(array,3));
 
-        int[] array = new int[]{1, 3, 0, 5, 6};
-        print(new isContinuousSolution().isContinuous(array));
+//        int[] array = new int[]{1, 3, 0, 5, 6};
+//        print(new isContinuousSolution().isContinuous(array));
+
+        print(new StrToIntSolution().StrToInt("-2147483649"));
 
 
     }
