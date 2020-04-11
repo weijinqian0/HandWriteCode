@@ -75,7 +75,11 @@ public class Main {
 //        int[] array = new int[]{1, 3, 0, 5, 6};
 //        print(new isContinuousSolution().isContinuous(array));
 
-        print(new StrToIntSolution().StrToInt("-2147483649"));
+//        print(new StrToIntSolution().StrToInt("-2147483649"));
+
+        char[] str = new char[]{'a'};
+        char[] pattern = new char[]{'a', 'b'};
+        print(new MatchSolution().match(str, pattern));
 
 
     }
