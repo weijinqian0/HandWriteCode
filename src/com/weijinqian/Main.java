@@ -77,9 +77,12 @@ public class Main {
 
 //        print(new StrToIntSolution().StrToInt("-2147483649"));
 
-        char[] str = new char[]{'a'};
-        char[] pattern = new char[]{'a', 'b'};
-        print(new MatchSolution().match(str, pattern));
+//        char[] str = new char[]{'a'};
+//        char[] pattern = new char[]{'a', 'b'};
+//        print(new MatchSolution().match(str, pattern));
+
+        int[] array = new int[]{2, 3, 4, 2, 6, 2, 5, 1};
+        print(new MaxInWindowSolution().maxInWindows(array, 3));
 
 
     }
