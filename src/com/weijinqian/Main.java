@@ -85,7 +85,6 @@ public class Main {
         print(new MaxInWindowSolution().maxInWindows(array, 3));
 
 
-
     }
 
     private static void print(String value) {
