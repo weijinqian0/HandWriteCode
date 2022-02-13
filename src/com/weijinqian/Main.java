@@ -103,8 +103,8 @@ public class Main {
 //        String T = "XYZ";
 //        print(new MinWindow().minWindow(S, T));
 
-        int[] array=new int[]{1,2,8,4,6};
-        print(new LongestIncreaseSolution().LIS2(array));
+//        int[] array=new int[]{1,2,8,4,6};
+//        print(new LongestIncreaseSolution().LIS2(array));
 
 
 
