@@ -106,8 +106,17 @@ public class Main {
 //        int[] array=new int[]{1,2,8,4,6};
 //        print(new LongestIncreaseSolution().LIS2(array));
 
+//        int[] array = new int[]{-2,0,1,1,2};
+//        print(new NSum().threeSum(array));
 
-
+//        TreeNode root = new TreeNode(1);
+//        root.left = new TreeNode(1);
+//        root.right = new TreeNode(1);
+//        print(new FindPathSolution().FindPath(root, 2));
+//[1,2,4,5,6,3],[5,4,6,2,1,3]
+        int[] xianxu=new int[]{1,2,4,5,6,3};
+        int[] zhongxu = new int[]{5,4,6,2,1,3};
+        print(new BinaryTreeRightView().solve(xianxu,zhongxu));
     }
 
     private static void print(String value) {
