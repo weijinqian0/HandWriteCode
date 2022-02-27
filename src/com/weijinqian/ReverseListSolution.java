@@ -23,7 +23,7 @@ public class ReverseListSolution {
      * 其本质应该是一样的，就是每k个出栈一次
      *
      * @param head
-     * @param k
+     * @param
      * @return
      */
     private ListNode reverse(ListNode head, ListNode tail) {
@@ -56,6 +56,47 @@ public class ReverseListSolution {
         // 反转之和，a变成了最后一个，b变成下一个的头
         a.next = reverseKGroup(b, k);
         return newHead;
+    }
+
+    /**
+     * 反转固定位置的list
+     *
+     * @param head
+     * @param m
+     * @param n
+     * @return
+     */
+    public ListNode reverseBetween(ListNode head, int m, int n) {
+        int i = 1;
+        ListNode cur = head;
+        ListNode a = null;
+        ListNode b = null;
+        ListNode pre = null;
+        while (cur != null) {
+            if (i == m - 1) {
+                pre = cur;
+            }
+            if (i == m) {
+                a = cur;
+            }
+            if (i == n) {
+                b = cur;
+            }
+            cur = cur.next;
+            i++;
+        }
+        if (a == null || b == null || a == b) {
+            return head;
+        }
+
+        ListNode tail = b.next;
+        ListNode newHead = reverse(a, tail);
+        a.next = tail;
+        if(pre==null){
+            return newHead;
+        }
+        pre.next = newHead;
+        return head;
     }
 
 
