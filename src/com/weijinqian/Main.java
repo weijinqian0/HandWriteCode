@@ -117,13 +117,15 @@ public class Main {
 //        int[] xianxu=new int[]{1,2,4,5,6,3};
 //        int[] zhongxu = new int[]{5,4,6,2,1,3};
 //        print(new BinaryTreeRightView().solve(xianxu,zhongxu));
-        char[][] grid = new char[][]{{'1', '1', '0', '0', '0'},
-                {'0', '1', '0', '1', '1'},
-                {'0', '0', '0', '1', '1'},
-                {'0', '0', '0', '0', '0'},
-                {'0', '0', '1', '1', '1'}
-        };
-        print(new NumOfIsland().solve(grid));
+//        char[][] grid = new char[][]{{'1', '1', '0', '0', '0'},
+//                {'0', '1', '0', '1', '1'},
+//                {'0', '0', '0', '1', '1'},
+//                {'0', '0', '0', '0', '0'},
+//                {'0', '0', '1', '1', '1'}
+//        };
+//        print(new NumOfIsland().solve(grid));
+
+//        print(new RevertedSeqSolution().);
     }
 
     private static void print(String value) {

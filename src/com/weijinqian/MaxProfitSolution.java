@@ -76,4 +76,37 @@ public class MaxProfitSolution {
         return ans;
 
     }
+
+    /**
+     * 买卖股票的最好时机(四)
+     * @param prices
+     * @param k
+     * @return
+     */
+    public int maxProfit3 (int[] prices, int k) {
+        if (prices.length <= 1) return 0;
+
+        int[] cash = new int[prices.length];
+        for (int i = 0; i < k; i++) {
+            maxProfitOnePass(prices, cash);
+        }
+
+        return cash[cash.length-1];
+    }
+
+    public void maxProfitOnePass(int[] prices, int[] cash) {
+        // 买
+        int maxCash = Integer.MIN_VALUE;
+        for (int i = 0; i < cash.length; i++) {
+            cash[i] = Math.max(maxCash, cash[i] - prices[i]);
+            maxCash = Math.max(maxCash, cash[i]);
+        }
+
+        // 卖
+        maxCash = Integer.MIN_VALUE;
+        for (int i = 0; i < cash.length; i++) {
+            cash[i] = Math.max(maxCash, cash[i] + prices[i]);
+            maxCash = Math.max(maxCash, cash[i]);
+        }
+    }
 }
