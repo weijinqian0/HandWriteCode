@@ -1,4 +1,4 @@
-package com.weijinqian;
+package com.weijinqian.dp;
 
 public class MatchSolution {
 
