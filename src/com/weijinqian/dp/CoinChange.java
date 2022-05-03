@@ -27,7 +27,7 @@ public class CoinChange {
                     continue;
                 }
                 // 为啥是dp[i] 和 dp[i-coins[j]] + 1
-                dp[i] = Math.max(dp[i], dp[i - coins[j]] + 1);
+                dp[i] = Math.min(dp[i], dp[i - coins[j]] + 1);
             }
         }
         return dp[amount];
