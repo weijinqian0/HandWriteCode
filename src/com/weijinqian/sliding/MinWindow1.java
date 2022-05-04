@@ -1,9 +1,9 @@
-package com.weijinqian;
+package com.weijinqian.sliding;
 
 import java.util.HashMap;
 import java.util.Map;
 
-public class MinWindow {
+public class MinWindow1 {
     /**
      * NC28 最小覆盖子串
      *

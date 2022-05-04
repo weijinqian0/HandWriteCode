@@ -1,4 +1,4 @@
-package com.weijinqian;
+package com.weijinqian.dp;
 
 import java.util.ArrayList;
 import java.util.List;

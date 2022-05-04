@@ -1,4 +1,4 @@
-package com.weijinqian;
+package com.weijinqian.dp;
 
 //NC135 买卖股票的最好时机(三)
 public class MaxProfitSolution {
