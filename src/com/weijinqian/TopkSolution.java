@@ -17,7 +17,7 @@ public class TopkSolution {
             queue.offer(input[i]);
         }
         //因为是最大堆，也就是堆顶的元素是堆中最大的，遍历数组后面元素的时候，
-        //如果当前元素比堆顶元素大，就把堆顶元素给移除，然后再把当前元素放到堆中，
+        //如果当前元素比堆顶元素小，就把堆顶元素给移除，然后再把当前元素放到堆中，
         for (int i = k; i < input.length; ++i) {
             if (queue.peek() > input[i]) {
                 queue.poll();

@@ -27,6 +27,7 @@ public class CoinChange {
                     continue;
                 }
                 // 为啥是dp[i] 和 dp[i-coins[j]] + 1
+                // 当前金额下的最小硬币数量
                 dp[i] = Math.min(dp[i], dp[i - coins[j]] + 1);
             }
         }

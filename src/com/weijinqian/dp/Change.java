@@ -2,6 +2,14 @@ package com.weijinqian.dp;
 
 public class Change {
 
+    /**
+     * 完全背包问题，是说一个硬币可以放无数次
+     * 0-1背包问题，是说一个硬币只有一种方法，选或者不选
+     * 找零钱有多少种方案
+     * @param amount
+     * @param coins
+     * @return
+     */
     public int change(int amount, int[] coins) {
         if (coins == null || coins.length == 0) {
             return 0;
@@ -17,6 +25,7 @@ public class Change {
                     dp[i][j] = dp[i - 1][j];
                 } else {
                     // 这里为啥是i，是因为这里是完全背包问题，0-1则使用i-1
+                    // 在当前背包容量下，当前coins数，有多少种方案
                     dp[i][j] = dp[i - 1][j] + dp[i][j - coins[i - 1]];
                 }
             }
