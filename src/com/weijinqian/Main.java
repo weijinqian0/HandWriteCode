@@ -1,9 +1,8 @@
 package com.weijinqian;
 
+import com.weijinqian.dp.CutRopeSolution;
 import com.weijinqian.sliding.MinWindow;
 
-import java.util.Arrays;
-import java.util.Collections;
 import java.util.List;
 
 public class Main {
@@ -11,7 +10,7 @@ public class Main {
     public static void main(String[] args) {
         // write your code here
 //        System.out.println(new RobotSolution().DP1(10, 1, 100));
-//        print(new CutRopeSolution().DP(4));
+        print(new CutRopeSolution().cutRopeDp(8));
 
 //        char[] matrix = new char[]{'a', 'b', 'c', 'e', 's', 'f', 'c', 's', 'a', 'd', 'e', 'e'};
 //        char[] str = new char[]{'a', 'b', 'c', 'b'};

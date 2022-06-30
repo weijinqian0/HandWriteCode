@@ -1,7 +1,9 @@
 package com.weijinqian.dp;
 
 /**
- * 最长回文子序列和最长回文子串
+ * 最长回文子序列
+ * 最长回文子串
+ * 以最小的插入次数构造回文串
  */
 public class LongestPalindromeSub {
 
@@ -74,5 +76,68 @@ public class LongestPalindromeSub {
             }
         }
         return s.substring(beginIndex, beginIndex + maxLen);
+    }
+
+    /**
+     * 当前节点开始的回文子串
+     *
+     * @param s
+     * @param l
+     * @param r
+     * @return
+     */
+    String palindrome(String s, int l, int r) {
+        while (l >= 0 && r < s.length() && s.charAt(l) == s.charAt(r)) {
+            l--;
+            r++;
+        }
+        return s.substring(l + 1, r - l - 1);
+    }
+
+    /**
+     * 最长回文子串的另外一种写法，是从字符串的中心开始向两边扩展
+     *
+     * @param s
+     * @return
+     */
+    public String longestPalindromeSubArray1(String s) {
+        String res = "";
+        int len = s.length();
+        for (int i = 0; i < len; i++) {
+            String s1 = palindrome(s, i, i);
+            String s2 = palindrome(s, i, i + 1);
+            res = res.length() > s1.length() ? res : s1;
+            res = res.length() > s2.length() ? res : s2;
+        }
+        return res;
+    }
+
+
+    /**
+     * 以最小插入次数构造回文串
+     *
+     * @param s
+     * @return
+     */
+    public int minInsertions(String s) {
+        if (s == null || s.length() == 0) {
+            return 0;
+        }
+        int len = s.length();
+        int[][] dp = new int[len][len];
+//        dp[i][j]=dp[i+1][j-1] 依赖于下方和左边，因此j需要从左到右，i从下到上
+        for (int i = 0; i < len; i++) {
+            dp[i][i] = 1;
+        }
+        for (int i = len - 2; i >= 0; i--) {
+            for (int j = i + 1; j < len; j++) {
+                if (s.charAt(i) == s.charAt(j)) {
+                    dp[i][j] = dp[i + 1][j - 1];
+                } else {
+                    dp[i][j] = Math.min(dp[i + 1][j], dp[i][j - 1]) + 1;
+                }
+            }
+        }
+        return dp[0][len - 1];
     }
 }

@@ -61,29 +61,40 @@ public class MaxProfitSolution {
         int money = prices[0];
         int[] first = new int[n];
         for (int i = 1; i < n; ++i) {
+            // 前面最小的价格
             money = Math.min(money, prices[i]);
+            // 以当前为卖点，能获得的最大利润
             first[i] = Math.max(first[i - 1], prices[i] - money);
         }
+
         int[] second = new int[n];
         money = prices[n - 1];
         for (int i = n - 2; i >= 0; --i) {
+            // 后面最大的价格
             money = Math.max(money, prices[i]);
+            // 以当前为买点，能获得的最大利润
             second[i] = Math.max(second[i + 1], money - prices[i]);
         }
-        int ans = 0;
-        for (int i = 0; i < n; ++i)
-            ans = Math.max(ans, first[i] + second[i]);
-        return ans;
+
+        // 这里写错了
+        int ans1 = 0;
+        int ans2 = 0;
+        for (int i = 0; i < n; ++i) {
+            ans1 = Math.max(ans1, first[i]);
+            ans2 = Math.max(ans2, ans1 + second[i]);
+        }
+        return ans2;
 
     }
 
     /**
      * 买卖股票的最好时机(四)
+     *
      * @param prices
      * @param k
      * @return
      */
-    public int maxProfit3 (int[] prices, int k) {
+    public int maxProfit3(int[] prices, int k) {
         if (prices.length <= 1) return 0;
 
         int[] cash = new int[prices.length];
@@ -91,7 +102,7 @@ public class MaxProfitSolution {
             maxProfitOnePass(prices, cash);
         }
 
-        return cash[cash.length-1];
+        return cash[cash.length - 1];
     }
 
     public void maxProfitOnePass(int[] prices, int[] cash) {

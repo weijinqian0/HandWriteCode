@@ -18,6 +18,28 @@ public class RobCircleSolution {
         return Math.max(robRange(nums, 0, n - 2), robRange(nums, 1, n - 1));
     }
 
+    /**
+     * 间隔偷，所能获得最大利润
+     *
+     * @param nums
+     * @param start
+     * @param end
+     * @return
+     */
+    public int robRange1(int[] nums, int start, int end) {
+        if (nums == null || nums.length == 0) {
+            return 0;
+        }
+        // 当前位置所能获得的最大利润
+        int[] dp = new int[end - start + 1];
+        dp[start] = nums[start];
+        dp[start + 1] = nums[start + 1];
+        for (int i = start + 2; i <= end; i++) {
+            dp[i] = Math.max(dp[i - 1], dp[i - 2] + nums[i]);
+        }
+        return dp[end];
+    }
+
     public int robRange(int[] nums, int start, int end) {
         int n = nums.length;
         int dp_i_1 = 0;
