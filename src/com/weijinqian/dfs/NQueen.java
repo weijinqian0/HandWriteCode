@@ -41,7 +41,7 @@ public class NQueen {
     }
 
     /**
-     * 只要查找出来一次即可
+     * 只要查找出来一次即可，这样就在返回true就直接返回
      *
      * @param board
      * @param row

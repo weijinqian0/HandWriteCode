@@ -4,6 +4,7 @@ public class CanPartition {
 
     /**
      * 子集背包问题
+     * 其实就是01问题，每个数字只能取一次
      * @param nums
      * @return
      */
