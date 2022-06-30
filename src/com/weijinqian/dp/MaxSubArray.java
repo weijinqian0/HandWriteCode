@@ -2,6 +2,13 @@ package com.weijinqian.dp;
 
 public class MaxSubArray {
 
+    /**
+     * 最大子数组和
+     * dp的定义为以i结尾的最大子数组和
+     *
+     * @param nums
+     * @return
+     */
     public int maxSubArray(int[] nums) {
         if (nums == null || nums.length == 0) {
             return 0;

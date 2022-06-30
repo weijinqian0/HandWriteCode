@@ -2,6 +2,12 @@ package com.weijinqian.dp;
 
 public class LongestCommonSubsequence {
 
+    /**
+     * 最长相同子序列
+     * @param str1
+     * @param str2
+     * @return
+     */
     public int longestCommonSubsequence(String str1, String str2) {
         if (str1 == null || str1.length() == 0 || str2 == null || str2.length() == 0) {
             return 0;
