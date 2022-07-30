@@ -1,8 +1,5 @@
 package com.weijinqian;
 
-import com.weijinqian.dp.CutRopeSolution;
-import com.weijinqian.sliding.MinWindow;
-
 import java.util.List;
 
 public class Main {
@@ -10,7 +7,7 @@ public class Main {
     public static void main(String[] args) {
         // write your code here
 //        System.out.println(new RobotSolution().DP1(10, 1, 100));
-        print(new CutRopeSolution().cutRopeDp(8));
+//        print(new CutRopeSolution().cutRopeDp(8));
 
 //        char[] matrix = new char[]{'a', 'b', 'c', 'e', 's', 'f', 'c', 's', 'a', 'd', 'e', 'e'};
 //        char[] str = new char[]{'a', 'b', 'c', 'b'};
@@ -100,9 +97,11 @@ public class Main {
 //                1, 19, 707}, {13, 27, 144}, {22, 23, 154}};
 //        print(new GraphShortestPathSolution().findShortestPath(39, 98, arr1));
 
-        String S = "XDOYEZODEYXNZ";
-        String T = "XYZ";
-        print(new MinWindow().minWindow(S, T));
+//        String S = "XDOYEZODEYXNZ";
+//        String T = "XYZ";
+//        print(new MinWindow().minWindow(S, T));
+
+        print(new LongestPalindromeSequence().longestPalindrome("cbbd"));
 
 //        int[] array=new int[]{1,2,8,4,6};
 //        print(new LongestIncreaseSolution().LIS2(array));

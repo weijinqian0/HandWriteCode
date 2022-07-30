@@ -48,8 +48,8 @@ public class LongestPalindromeSub {
      * @return
      */
     public String longestPalindromeSubArray(String s) {
-        if (s == null || s.length() == 0) {
-            return "";
+        if (s == null || s.length() <= 1) {
+            return s;
         }
         int len = s.length();
         boolean[][] dp = new boolean[len][len];
@@ -60,7 +60,7 @@ public class LongestPalindromeSub {
         for (int i = 0; i < len; i++) {
             dp[i][i] = true;
         }
-        int maxLen = 0;
+        int maxLen = 1;
         int beginIndex = 0;
         for (int i = len - 2; i >= 0; i--) {
             for (int j = i + 1; j < len; j++) {
@@ -77,6 +77,39 @@ public class LongestPalindromeSub {
         }
         return s.substring(beginIndex, beginIndex + maxLen);
     }
+
+    /**
+     * 最长回文字数组，返回数组，唉，又写了一次，还是不咋会
+     * @param s
+     * @return
+     */
+    public String longestPalindrome(String s) {
+
+        if (s == null || s.length() <= 1) {
+            return s;
+        }
+        int len = s.length();
+        boolean[][] dp = new boolean[len + 1][len + 1];
+        for (int i = 0; i <= len; i++) {
+            dp[i][i] = true;
+        }
+        int maxLen = 1;
+        int maxIdx = 1;
+        for (int i = len; i >= 1; i--) {
+            for (int j = i + 1; j <= len; j++) {
+                if (s.charAt(i - 1) == s.charAt(j - 1)) {
+                    dp[i][j] = dp[i + 1][j - 1] || (j - i + 1) <= 2;
+                }
+                if (dp[i][j] && (j - i + 1) > maxLen) {
+                    maxLen = j - i + 1;
+                    maxIdx = i;
+                }
+            }
+        }
+
+        return s.substring(maxIdx - 1, maxIdx + maxLen - 1);
+    }
+
 
     /**
      * 当前节点开始的回文子串
