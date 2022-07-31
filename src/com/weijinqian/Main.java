@@ -1,5 +1,7 @@
 package com.weijinqian;
 
+import com.weijinqian.dp.RegularExpression;
+
 import java.util.List;
 
 public class Main {
@@ -101,8 +103,6 @@ public class Main {
 //        String T = "XYZ";
 //        print(new MinWindow().minWindow(S, T));
 
-        print(new LongestPalindromeSequence().longestPalindrome("cbbd"));
-
 //        int[] array=new int[]{1,2,8,4,6};
 //        print(new LongestIncreaseSolution().LIS2(array));
 
@@ -126,6 +126,11 @@ public class Main {
 //        print(new NumOfIsland().solve(grid));
 
 //        print(new RevertedSeqSolution().);
+//        "aaaaaaaaaaaaab"
+//        "a*a*a*a*a*a*a*a*a*a*c"
+//        "abcaaaaaaabaabcabac"
+//        ".*ab.a.*a*a*.*b*b*"
+        print(new RegularExpression().isMatch("abcaaaaaaabaabcabac", ".*ab.a.*a*a*.*b*b*"));
     }
 
     private static void print(String value) {
