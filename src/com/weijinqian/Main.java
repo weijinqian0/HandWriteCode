@@ -1,5 +1,6 @@
 package com.weijinqian;
 
+import com.weijinqian.dp.GenerateParenthesis;
 import com.weijinqian.dp.RegularExpression;
 
 import java.util.List;
@@ -130,7 +131,8 @@ public class Main {
 //        "a*a*a*a*a*a*a*a*a*a*c"
 //        "abcaaaaaaabaabcabac"
 //        ".*ab.a.*a*a*.*b*b*"
-        print(new RegularExpression().isMatch("abcaaaaaaabaabcabac", ".*ab.a.*a*a*.*b*b*"));
+//        print(new RegularExpression().isMatch("abcaaaaaaabaabcabac", ".*ab.a.*a*a*.*b*b*"));
+        print(new GenerateParenthesis().generateParenthesis(3));
     }
 
     private static void print(String value) {
