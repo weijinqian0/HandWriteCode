@@ -1,5 +1,6 @@
 package com.weijinqian;
 
+import com.weijinqian.dfs.GenerateTrees;
 import com.weijinqian.dp.*;
 
 import java.util.List;
@@ -142,7 +143,11 @@ public class Main {
 //        print(new WildcardMatch().isMatch("aa", "*"));
 //        int[] num = new int[]{2,3,1,1,4};
 //        print(new Jump().canJump(num));
-        print(new EditDistance().minDistance("", "a"));
+//        print(new EditDistance().minDistance("", "a"));
+//        print(new MaxRectangle().maximalRectangle());
+//        print(new IsScramble().isScramble("abcdbdacbdac", "bdacabcdbdac"));
+//        print(new NumDecodings().numDecodings("2101"));
+        print(new GenerateTrees().numTrees(3));
         print(System.currentTimeMillis() - time);
     }
 
