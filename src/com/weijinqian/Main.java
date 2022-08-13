@@ -2,8 +2,13 @@ package com.weijinqian;
 
 import com.weijinqian.dfs.IsInterleave;
 import com.weijinqian.dfs.Partition;
+import com.weijinqian.dfs.WordBreak;
+import com.weijinqian.dp.CalculateMinimumHP;
+import com.weijinqian.dp.MaxProductSolution;
 import com.weijinqian.dp.NumDistinct;
 
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
 
 public class Main {
@@ -152,7 +157,18 @@ public class Main {
 //        print(new IsInterleave().isInterleave("aabcc", "dbbca", "aadbcbbcac"));
 //        print(new NumDistinct().numDistinct("babgbag", "bag"));
 //        print(new Partition().partition("bb"));
-        print(new Partition().minCut("aabvccdd"));
+//        print(new Partition().minCut("aabvccdd"));
+//        List<String> wordDict = Arrays.asList("leet", "code");
+//        print(new WordBreak().wordBreak1("leetcode", wordDict));
+//        int[] nums = new int[]{-1,-2,-9,-6};
+//        print(new MaxProductSolution().maxProduct1(nums));
+        int[][] nums = new int[][]{
+                {1, -3, 3},
+                {0, -2, 0},
+                {-3, -3, -3}
+
+        };
+        print(new CalculateMinimumHP().calculateMinimumHP(nums));
         print(System.currentTimeMillis() - time);
     }
 
