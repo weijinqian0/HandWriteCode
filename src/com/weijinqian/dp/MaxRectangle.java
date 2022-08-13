@@ -4,44 +4,33 @@ public class MaxRectangle {
 
     /**
      * 85. 最大矩形，没写出来，先放一放
+     * 221. 最大正方形
      *
      * @param matrix
      * @return
      */
-    public int maximalRectangle(char[][] matrix) {
-        if (matrix == null || matrix.length == 0 || matrix[0].length == 0) {
-            return 0;
-        }
+    public int maximalSquare(char[][] matrix) {
+        /**
+         dp[i][j]表示以第i行第j列为右下角所能构成的最大正方形边长, 则递推式为:
+         dp[i][j] = 1 + min(dp[i-1][j-1], dp[i-1][j], dp[i][j-1]);
+         **/
         int m = matrix.length;
+        if (m < 1) return 0;
         int n = matrix[0].length;
+        int max = 0;
+        int[][] dp = new int[m + 1][n + 1];
 
-        return maxRec(matrix, 0, 0, m - 1, n - 1);
-
-
-    }
-
-    public int maxRec(char[][] matrix, int bi, int bj, int ei, int ej) {
-        // 首节点即尾节点
-        if (bi == ei && bj == ej) {
-            return matrix[bi][bj];
-        }
-        for (int i = bi; i <= ei; i++) {
-            for (int j = bj; j <= ej; j++) {
-                if (matrix[i][j] == '0') {
-                    return 0;
+        for (int i = 1; i <= m; ++i) {
+            for (int j = 1; j <= n; ++j) {
+                if (matrix[i - 1][j - 1] == '1') {
+                    dp[i][j] = 1 + Math.min(dp[i - 1][j - 1], Math.min(dp[i - 1][j], dp[i][j - 1]));
+                    max = Math.max(max, dp[i][j]);
                 }
-                int leftTop = maxRec(matrix, bi, bj, i, j);
-                int rightTop = maxRec(matrix, bi, j, i, ej);
-                int leftBottom = maxRec(matrix, i, bj, ei, j);
-                int rightBottom = maxRec(matrix, i, j, ei, ej);
-                if (leftTop == 0 || rightTop == 0 || leftBottom == 0 || rightBottom == 0) {
-                    return Math.max(leftTop, Math.max(rightTop, Math.max(leftBottom, rightBottom)));
-                } else {
-                    return leftTop + rightTop + leftBottom + rightBottom;
-                }
-
             }
         }
-        return 0;
+
+        return max * max;
     }
+
+
 }

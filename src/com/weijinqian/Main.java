@@ -1,10 +1,12 @@
 package com.weijinqian;
 
+import com.weijinqian.dfs.DiffWaysToCompute;
 import com.weijinqian.dfs.IsInterleave;
 import com.weijinqian.dfs.Partition;
 import com.weijinqian.dfs.WordBreak;
 import com.weijinqian.dp.CalculateMinimumHP;
 import com.weijinqian.dp.MaxProductSolution;
+import com.weijinqian.dp.MaxRectangle;
 import com.weijinqian.dp.NumDistinct;
 
 import java.util.ArrayList;
@@ -149,7 +151,13 @@ public class Main {
 //        int[] num = new int[]{2,3,1,1,4};
 //        print(new Jump().canJump(num));
 //        print(new EditDistance().minDistance("", "a"));
-//        print(new MaxRectangle().maximalRectangle());
+        char[][] matrix = new char[][]{
+                {'1', '0', '1', '0', '0'},
+                {'1', '0', '1', '1', '1'},
+                {'1', '1', '1', '1', '1'},
+                {'1', '0', '0', '1', '0'}
+        };
+//        print(new MaxRectangle().maximalSquare(matrix));
 //        print(new IsScramble().isScramble("abcdbdacbdac", "bdacabcdbdac"));
 //        print(new NumDecodings().numDecodings("2101"));
 //        print(new GenerateTrees().numTrees(3));
@@ -162,13 +170,15 @@ public class Main {
 //        print(new WordBreak().wordBreak1("leetcode", wordDict));
 //        int[] nums = new int[]{-1,-2,-9,-6};
 //        print(new MaxProductSolution().maxProduct1(nums));
-        int[][] nums = new int[][]{
-                {1, -3, 3},
-                {0, -2, 0},
-                {-3, -3, -3}
-
-        };
-        print(new CalculateMinimumHP().calculateMinimumHP(nums));
+//        int[][] nums = new int[][]{
+//                {1, -3, 3},
+//                {0, -2, 0},
+//                {-3, -3, -3}
+//
+//        };
+//        print(new CalculateMinimumHP().calculateMinimumHP(nums));
+        print(new DiffWaysToCompute().diffWaysToCompute1("2*3-4*5"));
+        print("");
         print(System.currentTimeMillis() - time);
     }
 
