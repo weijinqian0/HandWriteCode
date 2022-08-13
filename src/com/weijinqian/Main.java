@@ -1,10 +1,10 @@
 package com.weijinqian;
 
-import com.weijinqian.dfs.GenerateTrees;
-import com.weijinqian.dp.*;
+import com.weijinqian.dfs.IsInterleave;
+import com.weijinqian.dfs.Partition;
+import com.weijinqian.dp.NumDistinct;
 
 import java.util.List;
-import java.util.Timer;
 
 public class Main {
 
@@ -147,7 +147,12 @@ public class Main {
 //        print(new MaxRectangle().maximalRectangle());
 //        print(new IsScramble().isScramble("abcdbdacbdac", "bdacabcdbdac"));
 //        print(new NumDecodings().numDecodings("2101"));
-        print(new GenerateTrees().numTrees(3));
+//        print(new GenerateTrees().numTrees(3));
+
+//        print(new IsInterleave().isInterleave("aabcc", "dbbca", "aadbcbbcac"));
+//        print(new NumDistinct().numDistinct("babgbag", "bag"));
+//        print(new Partition().partition("bb"));
+        print(new Partition().minCut("aabvccdd"));
         print(System.currentTimeMillis() - time);
     }
 
