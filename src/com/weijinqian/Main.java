@@ -4,10 +4,7 @@ import com.weijinqian.dfs.DiffWaysToCompute;
 import com.weijinqian.dfs.IsInterleave;
 import com.weijinqian.dfs.Partition;
 import com.weijinqian.dfs.WordBreak;
-import com.weijinqian.dp.CalculateMinimumHP;
-import com.weijinqian.dp.MaxProductSolution;
-import com.weijinqian.dp.MaxRectangle;
-import com.weijinqian.dp.NumDistinct;
+import com.weijinqian.dp.*;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -177,7 +174,9 @@ public class Main {
 //
 //        };
 //        print(new CalculateMinimumHP().calculateMinimumHP(nums));
-        print(new DiffWaysToCompute().diffWaysToCompute1("2*3-4*5"));
+//        print(new DiffWaysToCompute().diffWaysToCompute1("2*3-4*5"));
+        int[] coins = new int[]{1,2,5};
+        print(new CoinChange().coinChange(coins, 11));
         print("");
         print(System.currentTimeMillis() - time);
     }
