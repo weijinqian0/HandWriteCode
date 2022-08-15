@@ -1,9 +1,6 @@
 package com.weijinqian;
 
-import com.weijinqian.dfs.DiffWaysToCompute;
-import com.weijinqian.dfs.IsInterleave;
-import com.weijinqian.dfs.Partition;
-import com.weijinqian.dfs.WordBreak;
+import com.weijinqian.dfs.*;
 import com.weijinqian.dp.*;
 
 import java.util.ArrayList;
@@ -14,6 +11,7 @@ public class Main {
 
     public static void main(String[] args) {
         // write your code here
+        long time = System.currentTimeMillis();
 //        System.out.println(new RobotSolution().DP1(10, 1, 100));
 //        print(new CutRopeSolution().cutRopeDp(8));
 
@@ -143,18 +141,18 @@ public class Main {
 //        print(System.currentTimeMillis() - time);
 //        int[] height = new int[]{4,2,0,3,2,5};
 //        print(new Trap().trap(height));
-        long time = System.currentTimeMillis();
+
 //        print(new WildcardMatch().isMatch("aa", "*"));
 //        int[] num = new int[]{2,3,1,1,4};
 //        print(new Jump().canJump(num));
 //        print(new EditDistance().minDistance("", "a"));
-        char[][] matrix = new char[][]{
-                {'1', '0', '1', '0', '0'},
-                {'1', '0', '1', '1', '1'},
-                {'1', '1', '1', '1', '1'},
-                {'1', '0', '0', '1', '0'}
-        };
-//        print(new MaxRectangle().maximalSquare(matrix));
+//        char[][] matrix = new char[][]{
+//                {'1', '0', '1', '0', '0'},
+//                {'1', '0', '1', '1', '1'},
+//                {'1', '1', '1', '1', '1'},
+//                {'1', '0', '0', '1', '0'}
+//        };
+////        print(new MaxRectangle().maximalSquare(matrix));
 //        print(new IsScramble().isScramble("abcdbdacbdac", "bdacabcdbdac"));
 //        print(new NumDecodings().numDecodings("2101"));
 //        print(new GenerateTrees().numTrees(3));
@@ -175,8 +173,17 @@ public class Main {
 //        };
 //        print(new CalculateMinimumHP().calculateMinimumHP(nums));
 //        print(new DiffWaysToCompute().diffWaysToCompute1("2*3-4*5"));
-        int[] coins = new int[]{1,2,5};
-        print(new CoinChange().coinChange(coins, 11));
+//        int[] coins = new int[]{1,2,5};
+//        print(new CoinChange().coinChange(coins, 11));
+
+//        int[][] matrix = new int[][]{
+//                {9, 9, 4},
+//                {6, 6, 8},
+//                {2, 1, 1}
+//        };
+//        print(new LongestIncreasingPath().longestIncreasingPath(matrix));
+//        print(new IntegerBreak().integerBreak(5));
+        print(new CountNumbersWithUniqueDigits().countNumbersWithUniqueDigits(4));
         print("");
         print(System.currentTimeMillis() - time);
     }
