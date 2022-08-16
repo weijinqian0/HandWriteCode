@@ -183,7 +183,11 @@ public class Main {
 //        };
 //        print(new LongestIncreasingPath().longestIncreasingPath(matrix));
 //        print(new IntegerBreak().integerBreak(5));
-        print(new CountNumbersWithUniqueDigits().countNumbersWithUniqueDigits(4));
+//        print(new CountNumbersWithUniqueDigits().countNumbersWithUniqueDigits(4));
+//        print(new GetMoneyAmount().getMoneyAmount(25));
+        int[] nums = new int[]{9};
+//        print(new WiggleMaxLength().wiggleMaxLength(nums));
+        print(new CombinationSum4().combinationSum4(nums, 3));
         print("");
         print(System.currentTimeMillis() - time);
     }
