@@ -185,9 +185,11 @@ public class Main {
 //        print(new IntegerBreak().integerBreak(5));
 //        print(new CountNumbersWithUniqueDigits().countNumbersWithUniqueDigits(4));
 //        print(new GetMoneyAmount().getMoneyAmount(25));
-        int[] nums = new int[]{9};
+        int[] nums = new int[]{0,1,2,3,4,8,9,11};
 //        print(new WiggleMaxLength().wiggleMaxLength(nums));
-        print(new CombinationSum4().combinationSum4(nums, 3));
+//        print(new CombinationSum4().combinationSum4(nums, 3));
+//        print(new MaxRotateFunction().maxRotateFunction(nums));
+        print(new CanCross().canCross(nums));
         print("");
         print(System.currentTimeMillis() - time);
     }
