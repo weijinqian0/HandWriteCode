@@ -1,4 +1,7 @@
-package com.weijinqian.dfs;
+package com.weijinqian.dp;
+
+import java.util.HashMap;
+import java.util.Map;
 
 public class NumberOfArithmeticSlices {
 
@@ -34,6 +37,32 @@ public class NumberOfArithmeticSlices {
             res += dp[i];
         }
         return res;
+    }
 
+    /**
+     * 446. 等差数列划分 II - 子序列
+     * 等差子序列的数目
+     * 因为还需要维持一个维度表示和上一维的差值
+     * // 思路有问题，因为差值有正负，所以使用数组很难表示；
+     * // 所以这里使用了Map数组来表示
+     * @param nums
+     * @return
+     */
+    public int numberOfArithmeticSlices1(int[] nums) {
+        int ans = 0;
+        int n = nums.length;
+        Map<Long, Integer>[] f = new Map[n];
+        for (int i = 0; i < n; ++i) {
+            f[i] = new HashMap<Long, Integer>();
+        }
+        for (int i = 0; i < n; ++i) {
+            for (int j = 0; j < i; ++j) {
+                long d = 1L * nums[i] - nums[j];
+                int cnt = f[j].getOrDefault(d, 0);
+                ans += cnt;
+                f[i].put(d, f[i].getOrDefault(d, 0) + cnt + 1);
+            }
+        }
+        return ans;
     }
 }
