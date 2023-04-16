@@ -2,6 +2,7 @@ package com.weijinqian;
 
 import com.weijinqian.dfs.FindSubstringInWraproundString;
 import com.weijinqian.dp.*;
+import com.weijinqian.second.CutCopeSolution;
 
 import java.util.List;
 
@@ -199,7 +200,8 @@ public class Main {
 //                {1,4}
 //        };
 //        print(new EraseOverlapIntervals().eraseOverlapIntervals1(nums));
-        print(new FindSubstringInWraproundString().findSubstringInWraproundString("zaba"));
+//        print(new FindSubstringInWraproundString().findSubstringInWraproundString("zaba"));
+        print(new CutCopeSolution().cuttingRope1(10));
         print("");
         print(System.currentTimeMillis() - time);
     }

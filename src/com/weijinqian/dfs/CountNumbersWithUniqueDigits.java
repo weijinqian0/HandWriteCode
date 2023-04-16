@@ -1,4 +1,4 @@
-package com.weijinqian.dp;
+package com.weijinqian.dfs;
 
 public class CountNumbersWithUniqueDigits {
 

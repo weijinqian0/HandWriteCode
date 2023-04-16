@@ -5,7 +5,7 @@ public class Change {
     /**
      * 完全背包问题，是说一个硬币可以放无数次
      * 0-1背包问题，是说一个硬币只有一种方法，选或者不选
-     * 找零钱有多少种方案
+     * 找零钱有多少种方案，不重复
      * @param amount
      * @param coins
      * @return
