@@ -2,6 +2,7 @@ package com.weijinqian.dp;
 
 /**
  * NC108 最大正方形
+ * 三个正方形才能够长一个大正方形，所以考虑左上，上，左，三个最大的变成
  * 这个题目可能算简单的了
  */
 public class MaxSquareSolution {

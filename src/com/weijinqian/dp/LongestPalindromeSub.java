@@ -147,7 +147,7 @@ public class LongestPalindromeSub {
 
 
     /**
-     * 以最小插入次数构造回文串
+     * 1312. 让字符串成为回文串的最少插入次数
      *
      * @param s
      * @return

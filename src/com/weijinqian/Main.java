@@ -1,9 +1,6 @@
 package com.weijinqian;
 
-import com.weijinqian.dfs.FindSubstringInWraproundString;
 import com.weijinqian.dp.*;
-import com.weijinqian.second.CalculateMinimumHP;
-import com.weijinqian.second.CutCopeSolution;
 
 import java.util.List;
 
@@ -204,7 +201,8 @@ public class Main {
 //        print(new FindSubstringInWraproundString().findSubstringInWraproundString("zaba"));
 //        print(new CutCopeSolution().cuttingRope1(10));
         int[][] dungeon = {{0, -3}};
-        print(new CalculateMinimumHP().calculateMinimumHP(dungeon));
+//        print(new CalculateMinimumHP().calculateMinimumHP(dungeon));
+        print(new LongestValidParentheses().longestValidParentheses(")()())"));
         print("");
         print(System.currentTimeMillis() - time);
     }

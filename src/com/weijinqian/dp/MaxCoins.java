@@ -2,6 +2,12 @@ package com.weijinqian.dp;
 
 public class MaxCoins {
 
+    /**
+     * https://blog.csdn.net/I12XXXXXLbull/article/details/107436503
+     * 戳气球
+     * @param nums
+     * @return
+     */
     public int maxCoins(int[] nums) {
         if (nums == null || nums.length == 0) {
             return 0;
