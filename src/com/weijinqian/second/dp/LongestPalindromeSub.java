@@ -1,4 +1,4 @@
-package com.weijinqian.second;
+package com.weijinqian.second.dp;
 
 /**
  * 最长回文子序列

@@ -1,4 +1,4 @@
-package com.weijinqian.second;
+package com.weijinqian.second.dp;
 
 /**
  * 跳跃游戏
