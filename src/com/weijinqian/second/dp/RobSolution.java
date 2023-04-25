@@ -89,6 +89,7 @@ public class RobSolution {
      * i 个房屋中窃取金额不超过
      * mx
      * mx 的房屋的最大个数。
+     *
      * @param nums
      * @param k
      * @return
@@ -99,15 +100,20 @@ public class RobSolution {
         while (left + 1 < right) {
             int mid = (left + right) >>> 1;
             int f0 = 0, f1 = 0;
-            for (int x : nums)
+            for (int x : nums) {
                 if (x > mid) f0 = f1;
                 else {
                     int tmp = f1;
                     f1 = Math.max(f1, f0 + 1);
                     f0 = tmp;
                 }
-            if (f1 >= k) right = mid;
-            else left = mid;
+            }
+            // 超了k，小于k的多了，金额选的大了
+            if (f1 >= k) {
+                right = mid;
+            } else {
+                left = mid;
+            }
         }
         return right;
     }

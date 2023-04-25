@@ -107,6 +107,15 @@ public class SplitArray {
         return left;
     }
 
+    /**
+     * 不超过x的子数组个数，判断与m的比较，
+     * 如果大于m，则说明：分的数组多了，要放大一些范围
+     * 如果小于m，则说明：分的数组少了，要缩小一些范围
+     * @param nums
+     * @param x
+     * @param m
+     * @return
+     */
     public boolean check(int[] nums, int x, int m) {
         int sum = 0;
         int cnt = 1;
