@@ -1,4 +1,4 @@
-package com.weijinqian.dfs;
+package com.weijinqian.dp;
 
 public class CanCross {
     /**
