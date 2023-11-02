@@ -2,6 +2,14 @@ package com.weijinqian.dfs;
 
 public class MatchSolution {
 
+    /**
+     * 字符串匹配 * 通配符
+     * @param str
+     * @param i
+     * @param pattern
+     * @param j
+     * @return
+     */
     public boolean matchStr(char[] str, int i, char[] pattern, int j) {
 
         // 边界

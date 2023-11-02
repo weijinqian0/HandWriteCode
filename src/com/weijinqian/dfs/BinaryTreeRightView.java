@@ -7,6 +7,7 @@ public class BinaryTreeRightView {
 
     /**
      * 使用递归的方式来做
+     * 前序、后序遍历
      *
      * @param xianxu
      * @param zhongxu
