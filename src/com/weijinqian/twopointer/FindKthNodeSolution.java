@@ -1,4 +1,6 @@
-package com.weijinqian;
+package com.weijinqian.twopointer;
+
+import com.weijinqian.ListNode;
 
 public class FindKthNodeSolution {
     /**

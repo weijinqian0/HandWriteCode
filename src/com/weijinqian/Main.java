@@ -142,7 +142,7 @@ public class Main {
 //        print(new WildcardMatch().isMatch("aa", "*"));
 //        int[] num = new int[]{2,3,1,1,4};
 //        print(new Jump().canJump(num));
-//        print(new EditDistance().minDistance("", "a"));
+        print(new EditDistance().minDistance("horse", "ros"));
 //        char[][] matrix = new char[][]{
 //                {'1', '0', '1', '0', '0'},
 //                {'1', '0', '1', '1', '1'},
@@ -202,9 +202,12 @@ public class Main {
 //        print(new CutCopeSolution().cuttingRope1(10));
         int[][] dungeon = {{0, -3}};
 //        print(new CalculateMinimumHP().calculateMinimumHP(dungeon));
-        print(new LongestValidParentheses().longestValidParentheses(")()())"));
-        print("");
-        print(System.currentTimeMillis() - time);
+//        print(new LongestValidParentheses().longestValidParentheses(")()())"));
+//        print("");
+//        print(System.currentTimeMillis() - time);
+        int[] coins = new int[]{1,2,5};
+
+        print(new CoinCount().count_coins(coins, 6));
     }
 
     private static void print(String value) {
